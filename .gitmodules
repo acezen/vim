@@ -1,3 +1,6 @@
 [submodule "bundle/youcompleteme"]
 	path = bundle/youcompleteme
 	url = https://github.com/valloric/youcompleteme
+[submodule "bundle/grubox"]
+	path = bundle/grubox
+	url = https://github.com/morhetz/gruvbox.git
