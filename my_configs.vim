@@ -8,8 +8,11 @@ set shiftwidth=2
 set tabstop=2
 set smarttab
 
+" 80 charater line
+highlight ColorColumn ctermbg=gray
+set colorcolumn=81
+
 syntax enable
-set background=dark
 colorscheme gruvbox
 set background=dark
 
