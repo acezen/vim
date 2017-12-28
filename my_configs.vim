@@ -3,9 +3,9 @@ set nocp
 set nu
 
 filetype indent on
-set expandtab
-set shiftwidth=2
 set tabstop=2
+set shiftwidth=2
+set expandtab
 set smarttab
 
 " 80 charater line
@@ -16,6 +16,5 @@ syntax enable
 colorscheme gruvbox
 set background=dark
 
-"Youcompleteme fix
-let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-
+map <leader>y "+y
+map <leader>p "+p

@@ -104,6 +104,22 @@ vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
 
+""""""""""""""""""""""""""""""
+" => markdown-preview
+""""""""""""""""""""""""""""""
+let g:mkdp_path_to_chrome = 'chromium-browser'
+let g:mkdp_refresh_slow = 1  " refresh in :w or norm
+map <C-m> <Plug>MarkdownPreview
+
+
+
+
+""""""""""""""""""""""""""""""
+" => Youcompleteme
+""""""""""""""""""""""""""""""
+let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
