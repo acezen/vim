@@ -119,6 +119,8 @@ map <C-m> <Plug>MarkdownPreview
 """"""""""""""""""""""""""""""
 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 
+" disable the preview window
+set completeopt-=preview
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lightline
@@ -191,3 +193,10 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/youcompleteme/third_party/ycmd/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:gitgutter_enabled=0
 "nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => DoxygenToolkit 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:gitgutter_enabled=0
+nnoremap <silent> <leader>d :Dox<cr>
