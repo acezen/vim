@@ -36,6 +36,8 @@ set nocp
 set nu
 " autosave set, 5 min every time
 let autosave=300
+" automatically remove all trailing whitespace
+autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/\s\+$//e
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
