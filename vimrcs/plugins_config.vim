@@ -119,8 +119,34 @@ map <C-m> <Plug>MarkdownPreview
 """"""""""""""""""""""""""""""
 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 
+" completion in comments
+let g:ycm_complete_in_comments=1
+
+" allow vim load .ycm_extra_cong.py without prompt
+let g:ycm_comfirm_extra_conf=0
+
+" enable complete from tags file
+let g:ycm_collect_identifiers_from_tags_files=1
+set tags+=~/.vim/vimrcs/stdcpp.tags
+
+" OmniCppComplete shotcut
+inoremap <leader>; <C-x><C-o>
+
 " disable the preview window
 set completeopt-=preview
+
+" start complete from firt char
+let g:ycm_min_num_of_chars_of_completion=1
+
+" disable completion cache
+let g:ycm_cache_omnifunc=0
+
+" complete seed identifiers with syntax
+let g:ycm_seed_identifiers_with_syntax=1
+
+" Goto declaration / Definition
+" nnoremap <leader>jc :YcmCompleterGoToDeclaration<cr>
+" nnoremap <leader>jd :YcmCompleterGoToDefinition<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lightline
