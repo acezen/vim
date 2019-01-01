@@ -21,14 +21,14 @@ call pathogen#helptags()
 "let g:bufExplorerShowRelativePath=1
 "let g:bufExplorerFindActive=1
 "let g:bufExplorerSortBy='name'
-"map <leader>o :BufExplorer<cr>
+"map <Leader>o :BufExplorer<cr>
 
 
 """"""""""""""""""""""""""""""
 " => MRU plugin
 """"""""""""""""""""""""""""""
 "let MRU_Max_Entries = 400
-"map <leader>f :MRU<CR>
+"map <Leader>f :MRU<CR>
 
 
 """"""""""""""""""""""""""""""
@@ -44,7 +44,7 @@ call pathogen#helptags()
 let g:ctrlp_working_path_mode = 0
 
 let g:ctrlp_map = '<c-p>'
-map <leader>j :CtrlP<cr>
+map <Leader>j :CtrlP<cr>
 map <c-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
@@ -76,12 +76,14 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinSize=32
 let NERDTreeShowHidden=0
+let NERDTreeMinimaUI=1
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
-let g:NERDTreeWinSize=35
-map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark<Space>
-map <leader>nf :NERDTreeFind<cr>
+let NERDTreeAutoDeleteBuffer=1
+map <Leader>nn :NERDTreeToggle<cr>
+map <Leader>nb :NERDTreeFromBookmark<Space>
+map <Leader>nf :NERDTreeFind<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -130,7 +132,7 @@ let g:ycm_collect_identifiers_from_tags_files=1
 set tags+=~/.vim/vimrcs/stdcpp.tags
 
 " OmniCppComplete shotcut
-inoremap <leader>; <C-x><C-o>
+inoremap <Leader>; <C-x><C-o>
 
 " disable the preview window
 set completeopt-=preview
@@ -145,8 +147,8 @@ let g:ycm_cache_omnifunc=0
 let g:ycm_seed_identifiers_with_syntax=1
 
 " Goto declaration / Definition
-" nnoremap <leader>jc :YcmCompleterGoToDeclaration<cr>
-" nnoremap <leader>jd :YcmCompleterGoToDefinition<cr>
+nnoremap <Leader>jc :YcmCompleter GoToDeclaration<cr>
+nnoremap <Leader>jd :YcmCompleter GoToDefinition<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lightline
@@ -182,7 +184,7 @@ let g:ycm_seed_identifiers_with_syntax=1
 "let g:goyo_width=100
 "let g:goyo_margin_top = 2
 "let g:goyo_margin_bottom = 2
-"nnoremap <silent> <leader>z :Goyo<cr>
+"nnoremap <silent> <Leader>z :Goyo<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -211,24 +213,67 @@ let g:ycm_seed_identifiers_with_syntax=1
     "execute "SyntasticCheck"
     "execute "Errors"
 "endfunc
-"nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
+"nnoremap <silent> <Leader>c :call SyntasticCheckCoffeescript()<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:gitgutter_enabled=0
-"nnoremap <silent> <leader>d :GitGutterToggle<cr>
+"nnoremap <silent> <Leader>d :GitGutterToggle<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => DoxygenToolkit 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:gitgutter_enabled=0
-nnoremap <silent> <leader>d :Dox<cr>
+nnoremap <silent> <Leader>do :Dox<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ctrlsf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>sp :CtrlSF<cr>
+nnoremap <Leader>sp :CtrlSF<cr>
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Indent Guides
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" startup with vim
+let g:indent_guides_enables_on_vim_startup=1
+
+" set indent start level
+let g:indent_guides_start_level=2
+
+" set size
+let g:indent_guides_size=2
+
+" start/close mapping
+nnoremap <silent> <Leader>i <Plug>IndentGuidesToggle
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => FSwitch
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufEnter *.h let b:fswitchdst='cpp,cc'
+nnoremap <silent> <Leader>sw :FSHere<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Protodef
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set pullproto.pl path
+let g:protodefprotogetter='~/.vim/bundle/vim-protodef/pullproto.pl'
+
+" definition and declaration same 
+let g:disable_protodef_sorting=1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => MiniBufExplorer
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" show / hide minibuf
+map <Leader>bl :MBEToggle<cr>
+
+" buffer tab
+map <C-Tab> :MBEbn<cr>
+map <C-S-Tab> :MBEbp<cr>
