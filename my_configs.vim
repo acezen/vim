@@ -100,5 +100,5 @@ set nofoldenable
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>y "+y
-map <leader>p "+p
+" map <leader>y "+y
+" map <leader>p "+p

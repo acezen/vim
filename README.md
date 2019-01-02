@@ -21,7 +21,7 @@ Use [msysgit](http://msysgit.github.com/) to checkout the repository and run the
 
 ### Compile vim from source
 
-dependencies: python-dev, python3-dev, ruby-dev, lua-dev, libX11-dev, gtk-dev, gtk2-dev, gtk3-dev, ncurses-dev
+  firest install dependencies: python-dev, python3-dev, ruby-dev, lua-dev, libX11-dev, gtk-dev, gtk2-dev, gtk3-dev, ncurses-dev
     
     git clone git@github.com:vim/vim.git
     cd vim/
@@ -65,23 +65,23 @@ Distraction free mode using [goyo.vim](https://github.com/junegunn/goyo.vim) and
 
 I recommend reading the docs of these plugins to understand them better. Each plugin provides a much better Vim experience!
 
-~~* [ack.vim](https://github.com/mileszs/ack.vim): Vim plugin for `the_silver_searcher` (ag) or ack -- a wicked fast grep~~
+* ~~[ack.vim](https://github.com/mileszs/ack.vim): Vim plugin for `the_silver_searcher` (ag) or ack -- a wicked fast grep~~
 * [bufexplorer.zip](https://github.com/vim-scripts/bufexplorer.zip): Quickly and easily switch between buffers. This plugin can be opened with `<leader+o>`
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim): Fuzzy file, buffer, mru and tag finder. It's mapped to `<Ctrl+F>`
-~~* [goyo.vim](https://github.com/junegunn/goyo.vim) and [vim-zenroom2](https://github.com/amix/vim-zenroom2):~~ 
-~~* [lightline.vim](https://github.com/itchyny/lightline.vim): A light and configurable statusline/tabline for Vim~~
+* ~~[goyo.vim](https://github.com/junegunn/goyo.vim) and [vim-zenroom2](https://github.com/amix/vim-zenroom2):~~ 
+* ~~[lightline.vim](https://github.com/itchyny/lightline.vim): A light and configurable statusline/tabline for Vim~~
 * [NERD Tree](https://github.com/scrooloose/nerdtree): A tree explorer plugin for vim
-~~* [mru.vim](https://github.com/vim-scripts/mru.vim): Plugin to manage Most Recently Used (MRU) files. This plugin can be opened with `<leader+f>`~~
-~~* [open_file_under_cursor.vim](https://github.com/amix/open_file_under_cursor.vim): Open file under cursor when pressing `gf`~~
+* ~~[mru.vim](https://github.com/vim-scripts/mru.vim): Plugin to manage Most Recently Used (MRU) files. This plugin can be opened with `<leader+f>`~~
+* ~~[open_file_under_cursor.vim](https://github.com/amix/open_file_under_cursor.vim): Open file under cursor when pressing `gf`~~
 * [pathogen.vim](https://github.com/tpope/vim-pathogen): Manage your vim runtimepath 
-~~* [snipmate.vim](https://github.com/garbas/vim-snipmate): snipmate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim~~
-~~* [syntastic](https://github.com/scrooloose/syntastic): Syntax checking hacks for vim~~
-~~* [vim-commentary](https://github.com/tpope/vim-commentary): Comment stuff out.  Use `gcc` to comment out a line (takes a count), `gc` to comment out the target of a motion. `gcu` uncomments a set of adjacent commented lines.~~
-~~* [vim-expand-region](https://github.com/terryma/vim-expand-region): Allows you to visually select increasingly larger regions of text using the same key combination~~
-~~* [vim-fugitive](https://github.com/tpope/vim-fugitive): A Git wrapper so awesome, it should be illegal~~
-~~* [vim-indent-object](https://github.com/michaeljsmith/vim-indent-object): Defines a new text object representing lines of code at the same indent level. Useful for python/vim scripts~~
+* ~~[snipmate.vim](https://github.com/garbas/vim-snipmate): snipmate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim~~
+* ~~[syntastic](https://github.com/scrooloose/syntastic): Syntax checking hacks for vim~~
+* ~~[vim-commentary](https://github.com/tpope/vim-commentary): Comment stuff out.  Use `gcc` to comment out a line (takes a count), `gc` to comment out the target of a motion. `gcu` uncomments a set of adjacent commented lines.~~
+* ~~[vim-expand-region](https://github.com/terryma/vim-expand-region): Allows you to visually select increasingly larger regions of text using the same key combination~~
+* ~~[vim-fugitive](https://github.com/tpope/vim-fugitive): A Git wrapper so awesome, it should be illegal~~
+* ~~[vim-indent-object](https://github.com/michaeljsmith/vim-indent-object): Defines a new text object representing lines of code at the same indent level. Useful for python/vim scripts~~
 * [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors): Sublime Text style multiple selections for Vim, CTRL+N is remapped to CTRL+S (due to YankRing)
-~~* [vim-yankstack](https://github.com/maxbrunsfeld/vim-yankstack): Maintains a history of previous yanks, changes and deletes~~
+* ~~[vim-yankstack](https://github.com/maxbrunsfeld/vim-yankstack): Maintains a history of previous yanks, changes and deletes~~
 Remove all clutter and focus only on the essential. Similar to iA Writer or Write Room [Read more here](http://amix.dk/blog/post/19744)
 
 
@@ -89,20 +89,20 @@ Remove all clutter and focus only on the essential. Similar to iA Writer or Writ
 
 * [gruvbox](https://github.com/morhetz/gruvbox): The default
 * [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized)
-~~* [peaksea](https://github.com/vim-scripts/peaksea)~~
-~~* [vim-irblack](https://github.com/wgibbs/vim-irblack)~~
-~~* [mayansmoke](https://github.com/vim-scripts/mayansmoke)~~
-~~* [vim-pyte](https://github.com/therubymug/vim-pyte)~~
+* ~~[peaksea](https://github.com/vim-scripts/peaksea)~~
+* ~~[vim-irblack](https://github.com/wgibbs/vim-irblack)~~
+* ~~[mayansmoke](https://github.com/vim-scripts/mayansmoke)~~
+* ~~[vim-pyte](https://github.com/therubymug/vim-pyte)~~
 
 
 ## Included modes
 
-~~* [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
+* [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
 * [vim-less](https://github.com/groenewege/vim-less)
 * [vim-bundle-mako](https://github.com/sophacles/vim-bundle-mako)
 * [vim-markdown](https://github.com/tpope/vim-markdown)
 * [nginx.vim](https://github.com/vim-scripts/nginx.vim): Highlights configuration files for nginx
-* [vim-go](https://github.com/fatih/vim-go)~~
+* [vim-go](https://github.com/fatih/vim-go)
 
 
 ## How to include your own stuff?
@@ -126,13 +126,13 @@ The [Leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#lead
 
 ### Plugin related mappings
 
-;Open [bufexplorer](https://github.com/vim-scripts/bufexplorer.zip) to see and manage the current buffers (`<leader>o`):
-;    
-;    map <leader>bl :BufExplorer<cr>
+<!-- Open [bufexplorer](https://github.com/vim-scripts/bufexplorer.zip) to see and manage the current buffers (`<leader>o`): -->
+    
+    <!-- map <leader>bl :BufExplorer<cr> -->
 
-; Open [MRU.vim](https://github.com/vim-scripts/mru.vim) to see the recently open files (`<leader>f`):
-;
-;    map <leader>f :MRU<CR>
+<!-- Open [MRU.vim](https://github.com/vim-scripts/mru.vim) to see the recently open files (`<leader>f`): -->
+
+    <!-- map <leader>f :MRU<CR> -->
 
 Open [minibufexpl](https://github.com/fholgado/minibufexpl) to see and manage the current buffers (`<leader>o`):
     
@@ -140,7 +140,7 @@ Open [minibufexpl](https://github.com/fholgado/minibufexpl) to see and manage th
 
 Open [ctrlp.vim](https://github.com/kien/ctrlp.vim) plugin to quickly find a file or a buffer (`<leader>j` or `<ctrl>f`):
     
-     let g:ctrlp_map = '<c-f>'
+    let g:ctrlp_map = '<c-f>'
 
 [NERD Tree](https://github.com/scrooloose/nerdtree) mappings:
 
@@ -154,9 +154,9 @@ Open [ctrlp.vim](https://github.com/kien/ctrlp.vim) plugin to quickly find a fil
     map <C-Tab> :MBEbn<cr>
     map <C-S-Tab> :MBEbp<cr>
 
-; [goyo.vim](https://github.com/junegunn/goyo.vim) and [vim-zenroom2](https://github.com/amix/vim-zenroom2) lets you only focus on one thing at a time. It removes all the distractions and centers the content. It has a special look when editing Markdown, reStructuredText and textfiles. It only has one mapping. (`<leader>z`)
-;
-;    map <leader>z :Goyo<cr>
+<!-- [goyo.vim](https://github.com/junegunn/goyo.vim) and [vim-zenroom2](https://github.com/amix/vim-zenroom2) lets you only focus on one thing at a time. It removes all the distractions and centers the content. It has a special look when editing Markdown, reStructuredText and textfiles. It only has one mapping. (`<leader>z`) -->
+
+    <!-- map <leader>z :Goyo<cr> -->
 
 
 ### Normal mode mappings
@@ -165,10 +165,10 @@ Fast saving of a buffer (`<leader>w`):
 
 	nmap <leader>w :w!<cr>
 	
-Map `<Space>` to `/` (search) and `<Ctrl>+<Space>` to `?` (backwards search):
+Map `<Space>` to `/` (search) and `<Shift>+<Space>` to `?` (backwards search):
 	
 	map <space> /
-	map <c-space> ?
+	map <shift-space> ?
 
 Disable highlights when you press `<leader><cr>`:
 	
@@ -183,8 +183,8 @@ Smart way to move between windows (`<ctrl>j` etc.):
 
 Smart way to move between buffer:
 
-  map <leader>bn :MBEbn<cr>
-  map <leader>bp :MBEbp<cr>
+    map <leader>bn :MBEbn<cr>
+    map <leader>bp :MBEbp<cr>
 
 Closing of the current buffer(s) (`<leader>bd` and (`<leader>ba`)):
 	
@@ -209,13 +209,13 @@ Switch [CWD](http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
 	
 	map <leader>cd :cd %:p:h<cr>:pwd<cr>
 	
-; Open `ack.vim` for fast search:
-;	
-;	map <leader>g :Ack 
+<!-- Open `ack.vim` for fast search: -->
+	
+	<!-- map <leader>g :Ack  -->
 
 Open CtrlSF for fast search:
   
-  nnoremap <leader>g :CtrlSF<cr>
+    nnoremap <leader>g :CtrlSF<cr>
 
 Quickly open a buffer for scripbble:
 	
@@ -226,23 +226,25 @@ Toggle paste mode on and off:
 	map <leader>pp :setlocal paste!<cr>
 
 Open CtrlP use buffer search mode:
-
-  map <c-b> :CtrlPBuffer<cr>
+   
+    map <c-b> :CtrlPBuffer<cr>
 
 Open Markdown Preview:
 
-  map <c-m> <Plug>MarkdownPreview
+    map <c-m> <Plug>MarkdownPreview
 
 Insert Doxygen comment:
-
+    
+    nnoremap <leader>do :Dox<cr> 
+    
 Swith between header file and implement file:
 
-  nnoremap <silent> <leader>sw :FSHere<cr>
+    nnoremap <silent> <leader>sw :FSHere<cr>
 
 Jump to Declaration and Definition:
 
-  nnoremap <Leader>jc :YcmCompleter GoToDeclaration<cr>
-  nnoremap <Leader>jd :YcmCompleter GoToDefinition<cr>
+    nnoremap <Leader>jc :YcmCompleter GoToDeclaration<cr>
+    nnoremap <Leader>jd :YcmCompleter GoToDefinition<cr>
 
 ### Visual mode mappings
 

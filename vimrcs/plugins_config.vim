@@ -18,7 +18,7 @@ call pathogen#helptags()
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^\bundle'
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^\submodules\|^\bundle\'
 " open ctrlp use file search mode
 " map <Leader>j :CtrlP<cr>
 " open ctrlp use buffer search mode
