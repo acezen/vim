@@ -11,22 +11,6 @@ There are two versions:
 
 I would, of course, recommend using the awesome version.
 
-## How to install the Awesome version?
-The awesome version includes a lot of great plugins, configurations and color schemes that make Vim a lot better. To install it simply do following from your terminal:
-
-	git clone https://github.com/amix/vimrc.git ~/.vim_runtime
-	sh ~/.vim_runtime/install_awesome_vimrc.sh
-
-I also recommend using [the Hack font](http://sourcefoundry.org/hack/) (it's a free and awesome font designed for source code). The Awesome vimrc is already setup to try to use it.
-
-## How to install the Basic version?
-The basic version is just one file and no plugins. Just copy [basic.vim](https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim) and paste it into your vimrc.
-
-The basic version is useful to install on remote servers where you don't need many plugins, and you don't do many edits.
-
-	git clone git://github.com/amix/vimrc.git ~/.vim_runtime
-	sh ~/.vim_runtime/install_basic_vimrc.sh
-
 
 ## How to install on Windows?
 
@@ -35,13 +19,28 @@ Use [msysgit](http://msysgit.github.com/) to checkout the repository and run the
 
 ## How to install on Linux
 
-If you have vim aliased as `vi` instead of `vim`, make sure to either alias it: `alias vi=vim`. Otherwise, `apt-get install vim`
+### Compile vim from source
+
+dependencies: python-dev, python3-dev, ruby-dev, lua-dev, libX11-dev, gtk-dev, gtk2-dev, gtk3-dev, ncurses-dev
+    
+    git clone git@github.com:vim/vim.git
+    cd vim/
+    ./configure --with-features=huge --enable-pythoninterp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python2.7/config/ --enable-gui=gtk2 --enable-cscope --prefix=/usr
+    make
+    sudo  make install
+
+### Install vim config
+
+    git clone https://github.com/acezen/vim.git ~/.vim
+    ln -s ~/.vimrc ~/.vim/vimrc
+    cd ~/.vim
+    git submodule update --init --recursive
 
 ## How to update to latest version?
 
 Just do a git rebase!
 
-    cd ~/.vim_runtime
+    cd ~/.vim
     git pull --rebase
 
 
@@ -66,77 +65,82 @@ Distraction free mode using [goyo.vim](https://github.com/junegunn/goyo.vim) and
 
 I recommend reading the docs of these plugins to understand them better. Each plugin provides a much better Vim experience!
 
-* [ack.vim](https://github.com/mileszs/ack.vim): Vim plugin for `the_silver_searcher` (ag) or ack -- a wicked fast grep
+~~* [ack.vim](https://github.com/mileszs/ack.vim): Vim plugin for `the_silver_searcher` (ag) or ack -- a wicked fast grep~~
 * [bufexplorer.zip](https://github.com/vim-scripts/bufexplorer.zip): Quickly and easily switch between buffers. This plugin can be opened with `<leader+o>`
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim): Fuzzy file, buffer, mru and tag finder. It's mapped to `<Ctrl+F>`
-* [goyo.vim](https://github.com/junegunn/goyo.vim) and [vim-zenroom2](https://github.com/amix/vim-zenroom2): 
-* [lightline.vim](https://github.com/itchyny/lightline.vim): A light and configurable statusline/tabline for Vim
+~~* [goyo.vim](https://github.com/junegunn/goyo.vim) and [vim-zenroom2](https://github.com/amix/vim-zenroom2):~~ 
+~~* [lightline.vim](https://github.com/itchyny/lightline.vim): A light and configurable statusline/tabline for Vim~~
 * [NERD Tree](https://github.com/scrooloose/nerdtree): A tree explorer plugin for vim
-* [mru.vim](https://github.com/vim-scripts/mru.vim): Plugin to manage Most Recently Used (MRU) files. This plugin can be opened with `<leader+f>`
-* [open_file_under_cursor.vim](https://github.com/amix/open_file_under_cursor.vim): Open file under cursor when pressing `gf`
+~~* [mru.vim](https://github.com/vim-scripts/mru.vim): Plugin to manage Most Recently Used (MRU) files. This plugin can be opened with `<leader+f>`~~
+~~* [open_file_under_cursor.vim](https://github.com/amix/open_file_under_cursor.vim): Open file under cursor when pressing `gf`~~
 * [pathogen.vim](https://github.com/tpope/vim-pathogen): Manage your vim runtimepath 
-* [snipmate.vim](https://github.com/garbas/vim-snipmate): snipmate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim
-* [syntastic](https://github.com/scrooloose/syntastic): Syntax checking hacks for vim
-* [vim-commentary](https://github.com/tpope/vim-commentary): Comment stuff out.  Use `gcc` to comment out a line (takes a count), `gc` to comment out the target of a motion. `gcu` uncomments a set of adjacent commented lines.
-* [vim-expand-region](https://github.com/terryma/vim-expand-region): Allows you to visually select increasingly larger regions of text using the same key combination
-* [vim-fugitive](https://github.com/tpope/vim-fugitive): A Git wrapper so awesome, it should be illegal
-* [vim-indent-object](https://github.com/michaeljsmith/vim-indent-object): Defines a new text object representing lines of code at the same indent level. Useful for python/vim scripts
+~~* [snipmate.vim](https://github.com/garbas/vim-snipmate): snipmate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim~~
+~~* [syntastic](https://github.com/scrooloose/syntastic): Syntax checking hacks for vim~~
+~~* [vim-commentary](https://github.com/tpope/vim-commentary): Comment stuff out.  Use `gcc` to comment out a line (takes a count), `gc` to comment out the target of a motion. `gcu` uncomments a set of adjacent commented lines.~~
+~~* [vim-expand-region](https://github.com/terryma/vim-expand-region): Allows you to visually select increasingly larger regions of text using the same key combination~~
+~~* [vim-fugitive](https://github.com/tpope/vim-fugitive): A Git wrapper so awesome, it should be illegal~~
+~~* [vim-indent-object](https://github.com/michaeljsmith/vim-indent-object): Defines a new text object representing lines of code at the same indent level. Useful for python/vim scripts~~
 * [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors): Sublime Text style multiple selections for Vim, CTRL+N is remapped to CTRL+S (due to YankRing)
-* [vim-yankstack](https://github.com/maxbrunsfeld/vim-yankstack): Maintains a history of previous yanks, changes and deletes
+~~* [vim-yankstack](https://github.com/maxbrunsfeld/vim-yankstack): Maintains a history of previous yanks, changes and deletes~~
 Remove all clutter and focus only on the essential. Similar to iA Writer or Write Room [Read more here](http://amix.dk/blog/post/19744)
 
 
 ## Included color schemes
 
-* [peaksea](https://github.com/vim-scripts/peaksea): The default
+* [gruvbox](https://github.com/morhetz/gruvbox): The default
 * [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized)
-* [vim-irblack](https://github.com/wgibbs/vim-irblack)
-* [mayansmoke](https://github.com/vim-scripts/mayansmoke)
-* [vim-pyte](https://github.com/therubymug/vim-pyte)
+~~* [peaksea](https://github.com/vim-scripts/peaksea)~~
+~~* [vim-irblack](https://github.com/wgibbs/vim-irblack)~~
+~~* [mayansmoke](https://github.com/vim-scripts/mayansmoke)~~
+~~* [vim-pyte](https://github.com/therubymug/vim-pyte)~~
 
 
 ## Included modes
 
-* [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
+~~* [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
 * [vim-less](https://github.com/groenewege/vim-less)
 * [vim-bundle-mako](https://github.com/sophacles/vim-bundle-mako)
 * [vim-markdown](https://github.com/tpope/vim-markdown)
 * [nginx.vim](https://github.com/vim-scripts/nginx.vim): Highlights configuration files for nginx
-* [vim-go](https://github.com/fatih/vim-go)
+* [vim-go](https://github.com/fatih/vim-go)~~
 
 
 ## How to include your own stuff?
 
 After you have installed the setup, you can create **~/.vim_runtime/my_configs.vim** to fill in any configurations that are important for you. For instance, my **my_configs.vim** looks like this:
 
-	~/.vim_runtime (master)> cat my_configs.vim
+	~/.vim (master)> cat my_configs.vim
 	map <leader>ct :cd ~/Desktop/Todoist/todoist<cr>
 	map <leader>cw :cd ~/Desktop/Wedoist/wedoist<cr> 
 
 You can also install your plugins, for instance, via pathogen you can install [vim-rails](https://github.com/tpope/vim-rails):
 
-	cd ~/.vim_runtime
+	cd ~/.vim
 	git clone git://github.com/tpope/vim-rails.git sources_non_forked/vim-rails
 
 
 ## Key Mappings
 
-The [leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#leader) is `,`, so whenever you see `<leader>` it means `,`.
+The [Leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#leader) is `,`, so whenever you see `<Leader>` it means `,`.
 
 
 ### Plugin related mappings
 
-Open [bufexplorer](https://github.com/vim-scripts/bufexplorer.zip) to see and manage the current buffers (`<leader>o`):
+;Open [bufexplorer](https://github.com/vim-scripts/bufexplorer.zip) to see and manage the current buffers (`<leader>o`):
+;    
+;    map <leader>bl :BufExplorer<cr>
+
+; Open [MRU.vim](https://github.com/vim-scripts/mru.vim) to see the recently open files (`<leader>f`):
+;
+;    map <leader>f :MRU<CR>
+
+Open [minibufexpl](https://github.com/fholgado/minibufexpl) to see and manage the current buffers (`<leader>o`):
     
-    map <leader>o :BufExplorer<cr>
-
-Open [MRU.vim](https://github.com/vim-scripts/mru.vim) to see the recently open files (`<leader>f`):
-
-    map <leader>f :MRU<CR>
+    map <leader>bl :BufExplorer<cr>
 
 Open [ctrlp.vim](https://github.com/kien/ctrlp.vim) plugin to quickly find a file or a buffer (`<leader>j` or `<ctrl>f`):
     
-    let g:ctrlp_map = '<c-f>'
+     let g:ctrlp_map = '<c-f>'
 
 [NERD Tree](https://github.com/scrooloose/nerdtree) mappings:
 
@@ -144,9 +148,15 @@ Open [ctrlp.vim](https://github.com/kien/ctrlp.vim) plugin to quickly find a fil
     map <leader>nb :NERDTreeFromBookmark 
     map <leader>nf :NERDTreeFind<cr>
 
-[goyo.vim](https://github.com/junegunn/goyo.vim) and [vim-zenroom2](https://github.com/amix/vim-zenroom2) lets you only focus on one thing at a time. It removes all the distractions and centers the content. It has a special look when editing Markdown, reStructuredText and textfiles. It only has one mapping. (`<leader>z`)
+[MardownPreview](https://github.com/iamcco/markdown-preview.vim) mappings:
 
-    map <leader>z :Goyo<cr>
+    map <C-m> <Plug>MarkdownPreview
+    map <C-Tab> :MBEbn<cr>
+    map <C-S-Tab> :MBEbp<cr>
+
+; [goyo.vim](https://github.com/junegunn/goyo.vim) and [vim-zenroom2](https://github.com/amix/vim-zenroom2) lets you only focus on one thing at a time. It removes all the distractions and centers the content. It has a special look when editing Markdown, reStructuredText and textfiles. It only has one mapping. (`<leader>z`)
+;
+;    map <leader>z :Goyo<cr>
 
 
 ### Normal mode mappings
@@ -159,7 +169,6 @@ Map `<Space>` to `/` (search) and `<Ctrl>+<Space>` to `?` (backwards search):
 	
 	map <space> /
 	map <c-space> ?
-	map <silent> <leader><cr> :noh<cr>
 
 Disable highlights when you press `<leader><cr>`:
 	
@@ -171,6 +180,11 @@ Smart way to move between windows (`<ctrl>j` etc.):
 	map <C-k> <C-W>k
 	map <C-h> <C-W>h
 	map <C-l> <C-W>l
+
+Smart way to move between buffer:
+
+  map <leader>bn :MBEbn<cr>
+  map <leader>bp :MBEbp<cr>
 
 Closing of the current buffer(s) (`<leader>bd` and (`<leader>ba`)):
 	
@@ -195,9 +209,13 @@ Switch [CWD](http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
 	
 	map <leader>cd :cd %:p:h<cr>:pwd<cr>
 	
-Open `ack.vim` for fast search:
-	
-	map <leader>g :Ack 
+; Open `ack.vim` for fast search:
+;	
+;	map <leader>g :Ack 
+
+Open CtrlSF for fast search:
+  
+  nnoremap <leader>g :CtrlSF<cr>
 
 Quickly open a buffer for scripbble:
 	
@@ -207,6 +225,24 @@ Toggle paste mode on and off:
 	
 	map <leader>pp :setlocal paste!<cr>
 
+Open CtrlP use buffer search mode:
+
+  map <c-b> :CtrlPBuffer<cr>
+
+Open Markdown Preview:
+
+  map <c-m> <Plug>MarkdownPreview
+
+Insert Doxygen comment:
+
+Swith between header file and implement file:
+
+  nnoremap <silent> <leader>sw :FSHere<cr>
+
+Jump to Declaration and Definition:
+
+  nnoremap <Leader>jc :YcmCompleter GoToDeclaration<cr>
+  nnoremap <Leader>jd :YcmCompleter GoToDefinition<cr>
 
 ### Visual mode mappings
 
@@ -305,5 +341,5 @@ Cope mappings:
 
 ## How to uninstall
 Just do following:
-* Remove `~/.vim_runtime`
-* Remove any lines that reference `.vim_runtime` in your `~/.vimrc`
+* Remove `~/.vim`
+* Remove any lines that reference `.vim` in your `~/.vimrc`
